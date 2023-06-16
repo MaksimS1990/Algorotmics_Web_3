@@ -63,21 +63,23 @@ public class LinkedList {
             head = node;
         } else {
             Node currentNode = head;
-            while (currentNode != null) {
-                if (currentNode.next == null) {
-                    currentNode.next = node;
-                }
+            while (currentNode.next != null) {
                 currentNode = currentNode.next;
             }
+            currentNode.next = node;
         }
     }
 
     public  void removeLast() {
         if (head != null) {
             Node currentNode = head;
+            if (currentNode.next == null) {
+                head = null;
+            }
             while (currentNode.next != null) {
                 if (currentNode.next.next == null) {
                     currentNode.next = null;
+                    return;
                 }
                 currentNode = currentNode.next;
             }

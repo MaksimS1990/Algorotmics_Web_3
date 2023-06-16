@@ -14,6 +14,15 @@ public class Main {
         linkedList.addLast(31);
         linkedList.addLast(39);
         linkedList.printList();
+
+        System.out.println("linkedList.contains(55) = " + linkedList.contains(55));
+        System.out.println("linkedList.contains(156) = " + linkedList.contains(156));
+
+        linkedList.removeLast();
+        linkedList.printList();
+
+        linkedList.remove();
+        linkedList.printList();
     }
 
 }
