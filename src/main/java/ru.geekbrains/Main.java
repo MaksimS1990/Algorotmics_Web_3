@@ -1,4 +1,4 @@
-package main.java.ru.geekbrains;
+package ru.geekbrains;
 
 public class Main {
 
@@ -22,6 +22,13 @@ public class Main {
         linkedList.printList();
 
         linkedList.remove();
+        linkedList.printList();
+
+        System.out.println("список до разворота: ");
+        linkedList.printList();
+        System.out.println();
+        linkedList.revert();
+        System.out.println("развёрнутый список: ");
         linkedList.printList();
     }
 
